@@ -6,13 +6,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const auth_Router_1 = __importDefault(require("./routers/auth_Router"));
 const app = (0, express_1.default)();
 const PORT = 5000;
+app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((0, cookie_parser_1.default)());
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.send('Im alive!!!');
 });
+app.use("/auth", auth_Router_1.default);
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
