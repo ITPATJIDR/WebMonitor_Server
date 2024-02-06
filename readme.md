@@ -6,15 +6,15 @@
     `systemctl status mysqld`
 
 
-### Setup Project for window
+### Setup Project for Window
 
 `cd path/to/project`
 
 `./init.bat`
 
-### Setup Project for linux 
+### Setup Project for Linux && Mac
 
 `cd path/to/project`
 
-`make`
+`make dev`
 
